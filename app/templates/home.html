@@ -7,16 +7,16 @@
 </header>
 
 
-<h2>Hello there {{ current_user.username }}</h2>
 
 {% if current_user.is_authenticated %}
+<h2>Hello there {{ current_user.username }}.</h2>
 
 {% for post in posts %}
     <div class="container">
         <h3>
             <a href="{{ url_for('post_detail', post_id = post.id) }}">{{ post.title }}</a>
         </h3>
-        <p>{{ post.content }}</p>
+        <h5 class="mb-4"> By {{ post.author.username }}</h5>
     </div>
 {% endfor %}
 

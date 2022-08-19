@@ -9,13 +9,15 @@
         <div class="form-group">
             <fieldset>
                 {{ update_form.title.label }}
-                {{ update_form.title(class="form-control", placeholder = "Update Blog Post Title") }}
+                {{ update_form.title(class="form-control", value=post.title) }}
             </fieldset>
             <fieldset>
                 {{ update_form.content.label }}
-                {{ update_form.content(class="form-control", placeholder="Update Blog Post Content") }}
+                {{ update_form.content(class="form-control", value=post.content) }}
             </fieldset>
+            <fieldset>
             {{ update_form.submit(class="btn btn-primary") }}
+            </fieldset>
         </div>
     </form>
 </div>
